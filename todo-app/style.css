@@ -33,5 +33,72 @@
 .row {
     display: flex;
     justify-content: space-between;
-    background-color: lightgrey;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    font-weight: 14px;
+    border: none;
+}
+.row button {
+    border-radius: 30px;
+    padding: 16px 50px;
+    background: #ff5947;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid white;
+}
+ul li{
+   list-style: none;
+   font-size: 20px;
+   padding: 12px 8px 12px 50px;
+   user-select: none;
+   cursor: pointer; 
+   position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    color: #555;
+    text-decoration: line-through;
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #555;
+}
+ul li span:hover {
+    background: #edeef0;
 }
